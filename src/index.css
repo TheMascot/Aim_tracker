@@ -12,7 +12,7 @@ body {
 .container {
   height: calc(100vh - 20px);
   display: grid;
-  grid-template-columns: 15% 1fr 15%;
+  grid-template-columns: 10% 1fr 10%;
   grid-template-rows: auto auto 1fr auto;
 }
 header {
@@ -40,34 +40,56 @@ header img {
 }
 form {
   font-weight: 100;
-  letter-spacing: 2px;
-  padding: 20px;
-  display: flex;
+  letter-spacing: 1px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  grid-template-rows: 1fr 1 fr;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   grid-column-start: 2;
   grid-row-start: 2;
 }
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-line {
+  grid-row-start: 1;
+  margin-bottom: 5px;
+}
+.second-line {
+  grid-row-start: 2;
+}
+.second-line input {
+  width: 40px;
+}
 form p {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 20px;
 }
 form input,
 select {
   font-size: 18px;
   font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   background-color: #332c22;
   color: #a58c68;
 }
 form input {
-  width: 300px; /*can we make it grow if needed?*/
+  width: 200px; /*can we make it grow if needed?*/
+}
+form button {
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 button {
   font-family: "Bebas Neue", sans-serif;
   font-size: 18px;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   background-color: #504a43;
   color: #fab14b;
   margin-left: 10px;
@@ -95,6 +117,20 @@ button {
   font-weight: 100;
   font-size: 20px;
 }
+.aim-element {
+  width: fit-content;
+  margin-bottom: 5px;
+}
+.aim-element div {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 0;
+}
+.aim-element div button {
+  scale: 0.8;
+  margin-left: 0px;
+}
 .sort {
   margin-top: 1vh;
   grid-column-start: 2;
@@ -105,4 +141,16 @@ button {
 .sort p {
   margin-right: 5px;
   font-size: 18px;
+}
+div ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul {
+  padding-left: 1.2rem;
+}
+li {
+  list-style-type: "✌";
+  padding: 0;
 }
