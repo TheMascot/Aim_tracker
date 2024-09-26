@@ -151,6 +151,18 @@ ul {
   padding-left: 1.2rem;
 }
 li {
-  list-style-type: "✌";
   padding: 0;
+}
+.li-low {
+  list-style-type: "💧";
+}
+.li-medium {
+  list-style-type: "🔥";
+}
+.li-high {
+  list-style-type: "⚡";
+}
+.done {
+  list-style-type: "✅";
+  text-decoration: line-through;
 }
