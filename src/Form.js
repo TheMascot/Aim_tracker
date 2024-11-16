@@ -1,12 +1,19 @@
-import { useState } from "react";
-import { generateUniqueID } from "./App";
-import { Button } from "./Button";
+import { useState, useEffect } from 'react';
+import { generateUniqueID } from './App';
+import { Button } from './Button';
 
-export function Form({ onAddAim }) {
+export function Form({ aims, onAddAim }) {
   // States
-  const [timeline, setTimeline] = useState("today");
-  const [description, setDescription] = useState("");
+  const [timeline, setTimeline] = useState('today');
+  const [description, setDescription] = useState('');
   const [importance, setImportance] = useState(1);
+
+  useEffect(
+    function () {
+      localStorage.setItem('aims', JSON.stringify(aims));
+    },
+    [aims]
+  );
 
   // creating a new aim object upon Submit
   function handleSubmit(e) {
@@ -19,7 +26,7 @@ export function Form({ onAddAim }) {
       timestamp: new Date(),
       done: false,
     });
-    setDescription("");
+    setDescription('');
   }
 
   return (

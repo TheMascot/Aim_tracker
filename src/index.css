@@ -2,7 +2,7 @@
   margin: 0;
 }
 body {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-style: normal;
   background-image: linear-gradient(45deg, #4f4942 2%, #332c22 30%, #332819 100%);
   color: #cfa161;
@@ -74,7 +74,7 @@ form p {
 form input,
 select {
   font-size: 18px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 1px;
   background-color: #332c22;
   color: #a58c68;
@@ -87,7 +87,7 @@ form button {
   grid-row-end: 3;
 }
 button {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 18px;
   /* letter-spacing: 1px; */
   background-color: #504a43;
@@ -102,6 +102,7 @@ button {
   grid-row-start: 3;
   border: 2px solid #a58c68;
   border-radius: 30px;
+  overflow-y: auto;
 }
 .aim-list div {
   margin-top: 10px;
@@ -154,15 +155,15 @@ li {
   padding: 0;
 }
 .li-low {
-  list-style-type: "💧";
+  list-style-type: '🟡';
 }
 .li-medium {
-  list-style-type: "🔥";
+  list-style-type: '🟠';
 }
 .li-high {
-  list-style-type: "⚡";
+  list-style-type: '🔴';
 }
 .done {
-  list-style-type: "✅";
-  text-decoration: line-through;
+  list-style-type: '✅';
+  opacity: 0.6;
 }
